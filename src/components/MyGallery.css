@@ -1,0 +1,170 @@
+.my-gallery {
+  min-height: 100vh;
+  background-color: #8fb877;
+  padding: 60px 20px;
+}
+
+.my-gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.my-gallery-title {
+  font-family: "Playfair Display", serif;
+  color: #fdfaf5;
+  font-size: 40px;
+  margin: 0 0 6px;
+}
+
+.my-gallery-count {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #012b0f;
+  margin: 0;
+}
+
+/* ---------- Grid ---------- */
+.my-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.entry {
+  margin: 0;
+  background: #fdfaf5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.entry-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.entry-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 14px 16px 16px;
+}
+
+.entry-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.entry-prompt {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #012b0f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entry-date {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  color: #666;
+}
+
+/* ---------- Buttons ---------- */
+.entry-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.entry-share,
+.entry-delete {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  padding: 5px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.entry-share {
+  background: transparent;
+  color: #a83232;
+  border: 1px solid #a83232;
+}
+
+.entry-share.on {
+  background: #a83232;
+  color: #fdfaf5;
+}
+
+.entry-share:hover {
+  background: #d77a7a;
+  border-color: #d77a7a;
+  color: #fdfaf5;
+}
+
+.entry-delete {
+  background: transparent;
+  color: #666;
+  border: 1px solid transparent;
+}
+
+.entry-delete:hover {
+  color: #a83232;
+  border-color: #a83232;
+}
+
+.entry-share:focus-visible,
+.entry-delete:focus-visible,
+.my-gallery-cta:focus-visible,
+.my-gallery-back:focus-visible {
+  outline: 3px solid #012b0f;
+  outline-offset: 2px;
+}
+
+/* ---------- Empty state ---------- */
+.my-gallery-empty {
+  max-width: 420px;
+  margin: 60px auto;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  color: #012b0f;
+}
+
+.my-gallery-cta {
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 60px;
+  padding: 12px 36px;
+  background: #a83232;
+  color: #fdfaf5;
+  text-decoration: none;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.my-gallery-cta:hover {
+  background: #d77a7a;
+}
+
+/* ---------- Back link ---------- */
+.my-gallery-back {
+  display: block;
+  text-align: center;
+  margin: 50px 0 0;
+  color: #a83232;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  text-decoration: none;
+}
